@@ -6,154 +6,113 @@
 <title>Jagadeesh Achuthan — Multimedia Designer</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
   :root{
-    --black:#0A0A0B;
-    --panel:#141416;
-    --panel-hi:#1B1B1E;
-    --line:#2B2A2C;
-    --white:#F6F5F2;
-    --grey:#9A989C;
-    --grey-dim:#616063;
-    --rose:#C99299;
-    --rose-deep:#9C6169;
-    --rose-light:#E8C7CB;
+    --black:#151517;
+    --black-soft:#1D1D20;
+    --white:#FFFFFF;
+    --paper:#FAF8F7;
+    --ink:#1A1418;
+    --grey:#726E70;
+    --line-dark:#2C2B2E;
+    --line-light:#E9E2E1;
+    --rose:#E0AEB4;
+    --rose-deep:#C98891;
+    --rose-ink:#A85F6B;
   }
   *{box-sizing:border-box; margin:0; padding:0;}
   html{scroll-behavior:smooth;}
-  body{
-    background:var(--black); color:var(--white);
-    font-family:'Inter',sans-serif; line-height:1.6; overflow-x:hidden;
-  }
+  body{font-family:'Inter',sans-serif; line-height:1.6; overflow-x:hidden; background:var(--white); color:var(--ink);}
   a{color:inherit; text-decoration:none;}
-  .wrap{max-width:1060px; margin:0 auto; padding:0 32px;}
+  .wrap{max-width:1040px; margin:0 auto; padding:0 32px;}
   .mono{font-family:'JetBrains Mono',monospace;}
-  .display{font-family:'Anton',sans-serif; text-transform:uppercase; letter-spacing:0.01em;}
-  .foil{
-    background:linear-gradient(115deg, var(--rose-deep) 10%, var(--rose-light) 45%, var(--rose) 65%, var(--rose-deep) 90%);
-    -webkit-background-clip:text; background-clip:text; color:transparent;
-  }
 
-  /* ---------- NAV ---------- */
-  nav{position:sticky; top:0; z-index:50; background:rgba(10,10,11,0.9); backdrop-filter:blur(10px); border-bottom:1px solid var(--line);}
+  nav{position:sticky; top:0; z-index:50; background:rgba(21,21,23,0.92); backdrop-filter:blur(10px); border-bottom:1px solid var(--line-dark);}
   nav .wrap{display:flex; align-items:center; justify-content:space-between; height:62px;}
-  .nav-logo{font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:14px; letter-spacing:0.03em;}
+  .nav-logo{font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:14px; color:var(--white); letter-spacing:0.02em;}
   .nav-logo span{color:var(--rose);}
-  .nav-links{display:flex; gap:26px; font-size:13px; color:var(--grey); font-family:'JetBrains Mono',monospace;}
-  .nav-links a:hover{color:var(--rose-light);}
+  .nav-links{display:flex; gap:26px; font-size:13px; color:#B7B4B6; font-family:'JetBrains Mono',monospace;}
+  .nav-links a:hover{color:var(--rose);}
 
-  /* ---------- TICKER ---------- */
-  .ticker{
-    background:linear-gradient(90deg, var(--rose-deep), var(--rose), var(--rose-deep));
-    color:var(--black); overflow:hidden; white-space:nowrap; border-bottom:1px solid var(--line);
-  }
-  .ticker-track{display:inline-block; padding:9px 0; animation:scroll 22s linear infinite; font-family:'JetBrains Mono',monospace; font-weight:500; font-size:12.5px; letter-spacing:0.08em;}
-  .ticker-track span{margin:0 22px;}
-  @keyframes scroll{0%{transform:translateX(0);} 100%{transform:translateX(-50%);}}
-
-  /* ---------- HERO ---------- */
-  .hero{position:relative; padding:96px 0 90px; border-bottom:1px solid var(--line);
-    background-image:
-      repeating-linear-gradient(180deg, rgba(201,146,153,0.05) 0px, rgba(201,146,153,0.05) 1px, transparent 1px, transparent 64px);
-  }
-  .badge-row{display:flex; gap:10px; margin-bottom:30px; flex-wrap:wrap;}
-  .badge{
-    display:flex; align-items:center; gap:7px; font-family:'JetBrains Mono',monospace; font-size:11.5px;
-    color:var(--rose-light); border:1px solid var(--rose-deep); padding:7px 13px 7px 10px; border-radius:20px;
-    background:rgba(201,146,153,0.06);
-  }
-  .badge svg{width:14px; height:14px; flex-shrink:0;}
-
-  .card-frame{
-    border:1px solid var(--rose-deep); border-radius:14px; padding:44px 40px;
-    background:linear-gradient(155deg, rgba(201,146,153,0.06), transparent 60%);
-    position:relative;
-  }
-  .card-frame::before{
-    content:'AVAILABLE SEP 2026'; position:absolute; top:-11px; left:36px; background:var(--black);
-    padding:0 10px; font-family:'JetBrains Mono',monospace; font-size:11px; color:var(--rose); letter-spacing:0.06em;
-  }
-  .hero h1{font-size:66px; line-height:0.98; color:var(--white);}
-  .hero h1 .foil{display:block;}
-  .role-tag{font-family:'JetBrains Mono',monospace; font-size:13px; color:var(--grey); margin-top:18px; letter-spacing:0.03em;}
-  .hero-role{font-size:17px; color:var(--grey); margin-top:16px; max-width:600px;}
+  .hero{background:var(--black); color:var(--white); padding:110px 0 96px; position:relative;}
+  .hero::before{content:''; position:absolute; inset:0; pointer-events:none; background:radial-gradient(circle at 78% 18%, rgba(224,174,180,0.14), transparent 45%);}
+  .eyebrow{display:inline-flex; align-items:center; gap:8px; font-family:'JetBrains Mono',monospace; font-size:12px; color:var(--rose); border:1px solid var(--rose-ink); padding:6px 14px; border-radius:20px; margin-bottom:30px; background:rgba(224,174,180,0.07);}
+  .eyebrow::before{content:''; width:6px; height:6px; border-radius:50%; background:var(--rose);}
+  .hero h1{font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:58px; line-height:1.05; color:var(--white); position:relative;}
+  .hero h1 .last{color:var(--rose);}
+  .role-tag{font-family:'JetBrains Mono',monospace; font-size:13px; color:#A7A4A6; margin-top:20px;}
+  .hero-role{font-size:17px; color:#C9C6C7; margin-top:16px; max-width:600px; position:relative;}
   .hero-role b{color:var(--white); font-weight:500;}
-  .hero-cta{display:flex; gap:14px; margin-top:36px; flex-wrap:wrap;}
-  .btn{font-size:14px; font-weight:500; padding:13px 24px; border-radius:7px; border:1px solid var(--line); transition:all 0.2s ease; font-family:'Inter',sans-serif;}
-  .btn-primary{background:linear-gradient(100deg, var(--rose-deep), var(--rose)); color:var(--black); border:none; font-weight:600;}
-  .btn-primary:hover{filter:brightness(1.1);}
-  .btn-ghost{color:var(--white); background:transparent; border-color:var(--grey-dim);}
-  .btn-ghost:hover{border-color:var(--rose); color:var(--rose-light);}
+  .hero-cta{display:flex; gap:14px; margin-top:38px; flex-wrap:wrap; position:relative;}
+  .btn{font-size:14px; font-weight:500; padding:13px 24px; border-radius:7px; border:1px solid var(--line-dark); transition:all 0.2s ease;}
+  .btn-primary{background:var(--rose); color:var(--black); border:none; font-weight:600;}
+  .btn-primary:hover{background:var(--white);}
+  .btn-ghost{color:var(--white); background:transparent; border-color:#3B3A3D;}
+  .btn-ghost:hover{border-color:var(--rose); color:var(--rose);}
 
-  /* ---------- SECTIONS ---------- */
-  section{padding:84px 0; border-bottom:1px solid var(--line);}
-  .sec-head{display:flex; align-items:center; gap:16px; margin-bottom:42px;}
-  .jersey{
-    width:40px; height:40px; border-radius:50%; border:1.5px solid var(--rose); display:flex; align-items:center;
-    justify-content:center; font-family:'Anton',sans-serif; font-size:15px; color:var(--rose-light); flex-shrink:0;
-  }
-  .sec-title{font-family:'Space Grotesk',sans-serif; font-size:28px; font-weight:700; color:var(--white);}
+  .sec-label{font-family:'JetBrains Mono',monospace; font-size:12px; color:var(--rose-ink); margin-bottom:10px; letter-spacing:0.04em;}
+  .sec-title{font-family:'Space Grotesk',sans-serif; font-size:28px; font-weight:700; margin-bottom:40px;}
 
-  /* ---------- ABOUT ---------- */
+  #about{background:var(--paper); padding:80px 0; border-bottom:1px solid var(--line-light);}
+  #about .sec-title{color:var(--ink);}
   .about-text{font-size:16.5px; color:var(--grey); max-width:680px;}
-  .about-text b{color:var(--white); font-weight:500;}
+  .about-text b{color:var(--ink); font-weight:600;}
 
-  /* ---------- EXPERIENCE ---------- */
-  .job{display:grid; grid-template-columns:160px 1fr; gap:24px; padding:26px 0; border-top:1px solid var(--line);}
+  #experience{background:var(--black); color:var(--white); padding:80px 0;}
+  #experience .sec-title{color:var(--white);}
+  .job{display:grid; grid-template-columns:160px 1fr; gap:24px; padding:26px 0; border-top:1px solid var(--line-dark);}
   .job:last-child{border-bottom:none;}
-  .job-date{font-family:'JetBrains Mono',monospace; font-size:12.5px; color:var(--grey-dim); padding-top:2px;}
+  .job-date{font-family:'JetBrains Mono',monospace; font-size:12.5px; color:#77747A; padding-top:2px;}
   .job-title{font-size:17px; font-weight:600; color:var(--white);}
   .job-org{font-size:13.5px; color:var(--rose); margin:4px 0 12px;}
   .job ul{list-style:none;}
-  .job li{font-size:14px; color:var(--grey); padding-left:16px; position:relative; margin-bottom:6px;}
-  .job li::before{content:'—'; position:absolute; left:0; color:var(--rose-deep);}
+  .job li{font-size:14px; color:#B7B4B6; padding-left:16px; position:relative; margin-bottom:6px;}
+  .job li::before{content:'—'; position:absolute; left:0; color:var(--rose-ink);}
 
-  /* ---------- PROJECTS ---------- */
+  #work{background:var(--white); padding:84px 0; border-bottom:1px solid var(--line-light);}
+  #work .sec-title{color:var(--ink);}
   .proj-grid{display:grid; grid-template-columns:1fr 1fr; gap:22px;}
   @media(max-width:720px){.proj-grid{grid-template-columns:1fr;}}
-  .card{background:var(--panel); border:1px solid var(--line); border-radius:12px; overflow:hidden; transition:border-color 0.2s ease, transform 0.2s ease;}
-  .card:hover{border-color:var(--rose-deep); transform:translateY(-2px);}
+  .card{background:var(--paper); border:1px solid var(--line-light); border-radius:12px; overflow:hidden; transition:border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;}
+  .card:hover{border-color:var(--rose-deep); transform:translateY(-2px); box-shadow:0 10px 28px rgba(169,95,107,0.12);}
   .card-wide{grid-column:1 / -1;}
   .card-body{padding:22px 24px 26px;}
-  .card-meta{font-family:'JetBrains Mono',monospace; font-size:11.5px; color:var(--rose-light); margin-bottom:8px; letter-spacing:0.03em;}
-  .card-title{font-size:17px; font-weight:600; margin-bottom:9px; color:var(--white);}
+  .card-meta{font-family:'JetBrains Mono',monospace; font-size:11.5px; color:var(--rose-ink); margin-bottom:8px; letter-spacing:0.03em;}
+  .card-title{font-size:17px; font-weight:600; margin-bottom:9px; color:var(--ink);}
   .card-desc{font-size:13.5px; color:var(--grey);}
 
-  .poster-mosaic{display:grid; grid-template-columns:repeat(auto-fit,minmax(100px,1fr)); gap:4px; padding:4px; background:#000;}
+  .poster-mosaic{display:grid; grid-template-columns:repeat(auto-fit,minmax(100px,1fr)); gap:4px; padding:4px; background:var(--black);}
   .poster-mosaic a{display:block; aspect-ratio:1/1; overflow:hidden; border-radius:3px;}
   .poster-mosaic img{width:100%; height:100%; object-fit:cover; display:block; transition:transform 0.25s ease, opacity 0.25s ease;}
   .poster-mosaic a:hover img{transform:scale(1.06); opacity:0.9;}
 
   .video-row{display:flex; gap:16px; margin-top:20px; flex-wrap:wrap;}
   .video-item{flex:1 1 220px; max-width:260px;}
-  .video-item video{width:100%; aspect-ratio:9/16; background:#000; border-radius:8px; border:1px solid var(--line); display:block;}
-  .video-label{font-size:12px; color:var(--grey-dim); margin-top:8px; font-family:'JetBrains Mono',monospace;}
+  .video-item video{width:100%; aspect-ratio:9/16; background:#000; border-radius:8px; border:1px solid var(--line-light); display:block;}
+  .video-label{font-size:12px; color:var(--grey); margin-top:8px; font-family:'JetBrains Mono',monospace;}
 
   .video-visual{background-size:cover; background-position:center; display:flex; align-items:center; justify-content:center; cursor:pointer; position:relative; height:200px;}
-  .video-visual::before{content:''; position:absolute; inset:0; background:rgba(10,10,11,0.35); transition:background 0.2s ease;}
-  .video-visual:hover::before{background:rgba(10,10,11,0.15);}
-  .play-btn{position:relative; z-index:1; width:54px; height:54px; border-radius:50%; background:rgba(10,10,11,0.7); border:1.5px solid var(--rose); display:flex; align-items:center; justify-content:center;}
+  .video-visual::before{content:''; position:absolute; inset:0; background:rgba(21,21,23,0.32); transition:background 0.2s ease;}
+  .video-visual:hover::before{background:rgba(21,21,23,0.12);}
+  .play-btn{position:relative; z-index:1; width:54px; height:54px; border-radius:50%; background:rgba(21,21,23,0.65); border:1.5px solid var(--rose); display:flex; align-items:center; justify-content:center;}
   .play-btn i{width:0; height:0; border-top:9px solid transparent; border-bottom:9px solid transparent; border-left:15px solid var(--rose); margin-left:4px;}
 
-  /* ---------- SKILLS ---------- */
+  #skills{background:var(--black); color:var(--white); padding:80px 0;}
+  #skills .sec-title{color:var(--white);}
   .skills-wrap{display:flex; flex-wrap:wrap; gap:10px;}
-  .skill-pill{
-    display:flex; align-items:center; gap:10px; border:1px solid var(--line); border-radius:9px;
-    padding:12px 16px; background:var(--panel); font-size:13.5px; color:var(--white);
-  }
-  .skill-pill .skill-tag{font-family:'JetBrains Mono',monospace; font-size:10.5px; color:var(--rose-light); border-left:1px solid var(--line); padding-left:10px;}
+  .skill-pill{display:flex; align-items:center; gap:10px; border:1px solid var(--line-dark); border-radius:9px; padding:12px 16px; background:var(--black-soft); font-size:13.5px; color:var(--white);}
+  .skill-pill .skill-tag{font-family:'JetBrains Mono',monospace; font-size:10.5px; color:var(--rose); border-left:1px solid var(--line-dark); padding-left:10px;}
 
-  /* ---------- FOOTER ---------- */
-  footer{padding:64px 0; text-align:center;}
-  footer .lang{font-size:13px; color:var(--grey-dim); margin-top:16px; font-family:'JetBrains Mono',monospace;}
-  footer a.email{font-size:26px; font-family:'Space Grotesk',sans-serif; font-weight:700;}
-  footer a.email:hover{opacity:0.85;}
+  footer{background:var(--paper); padding:64px 0; text-align:center;}
+  footer .sec-title{color:var(--ink); text-align:center;}
+  footer .lang{font-size:13px; color:var(--grey); margin-top:16px; font-family:'JetBrains Mono',monospace;}
+  footer a.email{font-size:24px; font-family:'Space Grotesk',sans-serif; font-weight:700; color:var(--rose-ink);}
+  footer a.email:hover{color:var(--rose-deep);}
 
   @media(max-width:640px){
-    .hero h1{font-size:42px;}
+    .hero h1{font-size:40px;}
     .job{grid-template-columns:1fr; gap:6px;}
-    .card-frame{padding:32px 24px;}
   }
 </style>
 </head>
@@ -171,44 +130,32 @@
   </div>
 </nav>
 
-<div class="ticker">
-  <div class="ticker-track">
-    <span>TECH</span>•<span>FOOTBALL</span>•<span>MONEY</span>•<span>GYM</span>•<span>TECH</span>•<span>FOOTBALL</span>•<span>MONEY</span>•<span>GYM</span>•<span>TECH</span>•<span>FOOTBALL</span>•<span>MONEY</span>•<span>GYM</span>•<span>TECH</span>•<span>FOOTBALL</span>•<span>MONEY</span>•<span>GYM</span>•
-  </div>
-</div>
-
 <section class="hero">
   <div class="wrap">
-    <div class="badge-row">
-      <div class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v10a2 2 0 01-2 2H9a2 2 0 01-2-2V5a2 2 0 012-2z"/><path d="M3 15v4a2 2 0 002 2h4"/></svg>TECH</div>
-      <div class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 3v3m0 12v3m9-9h-3M6 12H3m13.5-6.5l-2 2m-7 7l-2 2m0-11l2 2m7 7l2 2"/></svg>FOOTBALL</div>
-      <div class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>MONEY</div>
-      <div class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6.5 6.5l11 11M4 4l3 3m13 13l-3-3M8 4L4 8m16 8l-4 4M2 12h3m14 0h3M6 9v6M18 9v6"/></svg>GYM</div>
-    </div>
-
-    <div class="card-frame">
-      <h1 class="display hero-name">JAGADEESH<span class="foil">ACHUTHAN</span></h1>
-      <div class="role-tag mono">MULTIMEDIA DESIGNER · CYBERJAYA, MALAYSIA</div>
-      <p class="hero-role">Working across <b>3D & motion (Blender)</b>, <b>Augmented Reality</b>, and <b>video editing</b> — with recent hands-on experience creating marketing content for a real training company. Disciplined off the clock too: trains like it's a job, follows the markets, and never misses a match.</p>
-      <div class="hero-cta">
-        <a class="btn btn-primary" href="#work">View work</a>
-        <a class="btn btn-ghost" href="https://wa.me/60197881251" target="_blank" rel="noopener">Get in touch</a>
-        <a class="btn btn-ghost" href="assets/Jagadeesh_Achuthan_Resume.pdf" target="_blank" rel="noopener">Download resume</a>
-      </div>
+    <div class="eyebrow">Available from September 2026</div>
+    <h1>JAGADEESH<br><span class="last">ACHUTHAN</span></h1>
+    <div class="role-tag">MULTIMEDIA DESIGNER · CYBERJAYA, MALAYSIA</div>
+    <p class="hero-role">Working across <b>3D & motion (Blender)</b>, <b>Augmented Reality</b>, and <b>video editing</b> — with recent hands-on experience creating marketing content for a real training company.</p>
+    <div class="hero-cta">
+      <a class="btn btn-primary" href="#work">View work</a>
+      <a class="btn btn-ghost" href="https://wa.me/60197881251" target="_blank" rel="noopener">Get in touch</a>
+      <a class="btn btn-ghost" href="assets/Jagadeesh_Achuthan_Resume.pdf" target="_blank" rel="noopener">Download resume</a>
     </div>
   </div>
 </section>
 
 <section id="about">
   <div class="wrap">
-    <div class="sec-head"><div class="jersey">01</div><h2 class="sec-title">About</h2></div>
+    <div class="sec-label">// 01</div>
+    <h2 class="sec-title">About</h2>
     <p class="about-text">Final-year <b>Multimedia Technologies</b> student based in Cyberjaya, Malaysia. Comfortable moving between creative concepting and technical execution — from modelling a CGI short film in Blender, to shooting and editing promotional video for a live marketing campaign. Currently looking for a permanent multimedia design role starting <b>September 2026</b>.</p>
   </div>
 </section>
 
 <section id="experience">
   <div class="wrap">
-    <div class="sec-head"><div class="jersey">02</div><h2 class="sec-title">Experience</h2></div>
+    <div class="sec-label">// 02</div>
+    <h2 class="sec-title">Experience</h2>
 
     <div class="job">
       <div class="job-date mono">Apr 2026 —<br>Aug 2026</div>
@@ -248,7 +195,8 @@
 
 <section id="work">
   <div class="wrap">
-    <div class="sec-head"><div class="jersey">03</div><h2 class="sec-title">Selected projects</h2></div>
+    <div class="sec-label">// 03</div>
+    <h2 class="sec-title">Selected projects</h2>
     <div class="proj-grid">
 
       <div class="card card-wide">
@@ -295,7 +243,7 @@
         <div class="card-body">
           <div class="card-meta">FINAL YEAR PROJECT · BLENDER / CGI · 2025</div>
           <div class="card-title">CGI short film — "Knowledge Is Survival"</div>
-          <p class="card-desc">Ongoing. Story development, 3D modelling, animation, lighting, and rendering for a full CGI short. <a href="https://youtu.be/icnHxjfp-_k" target="_blank" rel="noopener" style="color:var(--rose-light);">Watch on YouTube →</a></p>
+          <p class="card-desc">Ongoing. Story development, 3D modelling, animation, lighting, and rendering for a full CGI short. <a href="https://youtu.be/icnHxjfp-_k" target="_blank" rel="noopener" style="color:var(--rose-ink);">Watch on YouTube →</a></p>
         </div>
       </div>
 
@@ -305,7 +253,8 @@
 
 <section id="skills">
   <div class="wrap">
-    <div class="sec-head"><div class="jersey">04</div><h2 class="sec-title">Skills</h2></div>
+    <div class="sec-label">// 04</div>
+    <h2 class="sec-title">Skills</h2>
     <div class="skills-wrap">
       <div class="skill-pill">3D modelling &amp; animation <span class="skill-tag">BLENDER</span></div>
       <div class="skill-pill">Motion graphics <span class="skill-tag">AFTER EFFECTS</span></div>
@@ -320,18 +269,13 @@
 
 <footer id="contact">
   <div class="wrap">
-    <div class="sec-head" style="justify-content:center;"><div class="jersey">05</div><h2 class="sec-title">Let's work together</h2></div>
-    <a class="email foil" href="mailto:jagadeeshazard@gmail.com">jagadeeshazard@gmail.com</a>
+    <div class="sec-label" style="justify-content:center; display:flex;">// 05</div>
+    <h2 class="sec-title">Let's work together</h2>
+    <a class="email" href="mailto:jagadeeshazard@gmail.com">jagadeeshazard@gmail.com</a>
     <div class="lang">019-788 1251 · Cyberjaya, Malaysia</div>
     <div class="lang">EN C2 · MS C2 · TA C2 · ZH A1</div>
   </div>
 </footer>
-
-<script>
-  document.querySelector('.hero-name').addEventListener('click', function(){
-    this.classList.toggle('flip');
-  });
-</script>
 
 </body>
 </html>
